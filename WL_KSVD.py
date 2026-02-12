@@ -148,7 +148,7 @@ class WL_KSVD(Estimator):
 
         self.aksvd = aksvd
 
-        return self
+        return {"documents": documents, "vocab": self._vocab, "x": x, "dictionary": self._dictionary, "embeddings": self._embedding}
 
     def get_embedding(self) -> np.array:
         r"""Getting the embedding of graphs.
